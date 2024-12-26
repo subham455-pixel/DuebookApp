@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duebook App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Login Page -->
+<div id="loginPage" class="login-page">
+    <div class="login-box">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit" class="btn">Login</button>
+            <div id="loginError" class="error-message" style="display: none;">Invalid login credentials!</div>
+        </form>
+    </div>
+</div>
+
+<!-- Main App Page -->
+<div id="app" class="app" style="display: none;">
+    <header>
+        <h1>Duebook</h1>
+        <button id="addNewCustomerBtn">Add New Customer</button>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search by name or phone">
+    </div>
+
+    <!-- Customers List -->
+    <div id="customersList" class="customers-list"></div>
+</div>
+
+<!-- Add Customer Modal -->
+<div id="addCustomerModal" class="modal">
+    <div class="modal-content">
+        <h2>Add Customer</h2>
+        <form id="addCustomerForm">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="phone" placeholder="Phone" required>
+            <input type="text" id="address" placeholder="Address" required>
+            <input type="number" id="totalDue" placeholder="Total Due" required>
+            <input type="number" id="amountPaid" placeholder="Amount Paid" required>
+            <input type="date" id="purchaseDate" required>
+            <button type="submit" class="btn">Add Customer</button>
+            <button type="button" id="cancelBtn" class="cancel-btn">Cancel</button>
+        </form>
+        <span id="closeModalBtn" class="close-btn">&times;</span>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
